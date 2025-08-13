@@ -33,8 +33,8 @@ Used to combine or invert conditions.
 
 | Operator | Description      | Example         |
 |----------|------------------|----------------|
-| `&&`     | Logical AND      | `a && b`       |
-| `||`     | Logical OR       | `a || b`       |
+| `&&`     | Logical AND      | `(a > 5) && (b < 5)`       |
+| `||`     | Logical OR       | `(a > 5) || (b < 5)`       |
 | `!`      | Logical NOT      | `!a`           |
 
 ### 4. Assignment Operators
@@ -63,7 +63,7 @@ Operate on bits of integer data.
 | Operator | Description      | Example         |
 |----------|------------------|----------------|
 | `&`      | Bitwise AND      | `a & b`        |
-| `|`      | Bitwise OR       | `a | b`        |
+| `&#124;` | Bitwise OR       | `a &#124; b`   |
 | `^`      | Bitwise XOR      | `a ^ b`        |
 | `~`      | Bitwise NOT      | `~a`           |
 | `<<`     | Left shift       | `a << 2`       |
@@ -92,7 +92,7 @@ Other useful operators.
 - **Unary operators** operate on a single operand.
   - Examples: `++a`, `--b`, `!flag`, `~x`, `sizeof(a)`, `&x`, `*ptr`
 - **Binary operators** operate on two operands.
-  - Examples: `a + b`, `x - y`, `a && b`, `a | b`, `a = b`
+  - Examples: `a + b`, `x - y`, `a && b`, `a || b`, `a | b`, `a = b`
 
 ---
 
@@ -117,9 +117,11 @@ int main() {
     printf("Negation: %d\n", -a);            // Arithmetic (unary)
     printf("Equal: %d\n", a == b);           // Relational
     printf("Logical AND: %d\n", (a > 5) && (b < 5)); // Logical
+    printf("Logical OR: %d\n", (a > 5) || (b < 5));  // Logical OR
     a += 5;                                  // Assignment
     printf("Incremented a: %d\n", ++a);      // Increment (unary)
-    printf("Bitwise AND: %d\n", a & b);      // Bitwise
+    printf("Bitwise AND: %d\n", a & b);      // Bitwise AND
+    printf("Bitwise OR: %d\n", a | b);       // Bitwise OR
     int max = (a > b) ? a : b;               // Ternary
     printf("Max: %d\n", max);
     printf("Size of int: %lu\n", sizeof(int)); // Miscellaneous
