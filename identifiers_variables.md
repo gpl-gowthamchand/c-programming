@@ -74,6 +74,28 @@ They help uniquely identify these elements in your code.
 
 ---
 
+## Variables vs Constants
+
+**Variables** can change their value during program execution, while **constants** have fixed values that do not change.
+
+### Declaring Constants
+
+- Use the `const` keyword or `#define` preprocessor directive.
+
+#### Examples
+
+```c
+int age = 25;         // variable: value can change
+age = 30;             // valid
+
+const float PI = 3.14; // constant: value cannot change
+// PI = 3.1415;        // invalid, will cause a compile error
+
+#define MAX_SIZE 100   // constant using preprocessor
+```
+
+---
+
 ## Examples
 
 ```c
@@ -91,6 +113,15 @@ void demo() {
 int main() {
     demo();
     demo();
+
+    const int daysInWeek = 7; // constant
+    int x = 5;                // variable
+    x = 10;                   // valid
+    // daysInWeek = 8;        // invalid, will cause error
+
+    printf("Days in a week: %d\n", daysInWeek);
+    printf("x: %d\n", x);
+
     return 0;
 }
 ```
@@ -103,7 +134,8 @@ int main() {
 - Use **global variables** for data shared across multiple functions.
 - Use **static variables** to preserve state between function calls.
 - Use **extern variables** for sharing data between different source files.
+- Use **constants** for values that should not change (like mathematical constants, array sizes).
 
 ---
 
-Identifiers and variables are fundamental for organizing and managing data in your
+Identifiers, variables, and constants are fundamental for organizing and managing data in your
