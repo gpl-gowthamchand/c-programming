@@ -98,6 +98,48 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
+## Common Mistakes and Errors in Arrays
+
+1. **Accessing Out-of-Bounds Index**
+   ```c
+   int arr[3] = {1, 2, 3};
+   printf("%d", arr[3]); // Error: valid indices are 0, 1, 2
+   ```
+   *Accessing an index outside the array size leads to undefined behavior.*
+
+2. **Uninitialized Array Elements**
+   ```c
+   int arr[5];
+   printf("%d", arr[2]); // May print garbage value if not initialized
+   ```
+   *Always initialize arrays before use.*
+
+3. **Wrong Array Size**
+   ```c
+   int arr[2] = {1, 2, 3}; // Warning: too many initializers
+   ```
+   *Number of initializers should not exceed the declared size.*
+
+4. **Using Variable as Array Size (before C99)**
+   ```c
+   int n = 5;
+   int arr[n]; // Error in C89, allowed in C99 and later
+   ```
+   *Use constant size for arrays in older C standards.*
+
+5. **Forgetting Index Starts at 0**
+   ```c
+   int arr[5];
+   arr[5] = 10; // Error: last valid index is 4
+   ```
+
+6. **Mixing Data Types**
+   ```c
+   int arr[3] = {1, 'a', 2.5}; // All elements should be of the same type
+   ```
+
+---
+
 ## Summary
 
 - Arrays store multiple values of the same type.
@@ -105,5 +147,6 @@ for (int i = 0; i < 5; i++) {
 - Size is fixed at declaration.
 - Access elements using their index.
 - Use loops for processing arrays.
+- Avoid common mistakes like out-of-bounds access and uninitialized elements.
 
-Arrays are essential for handling collections of data efficiently in
+Arrays are essential for handling collections of data efficiently in C
