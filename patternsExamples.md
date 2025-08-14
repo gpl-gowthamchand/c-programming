@@ -109,8 +109,145 @@ int main() {
 
 ---
 
+## 4. Centered Pyramid Star Pattern
+
+**Code:**
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    int n = 8;
+
+    for (i = 1; i <= n; i++) {
+        // Print spaces
+        for (j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+**Explanation:**  
+- Prints spaces to center the stars.
+- Prints an odd number of stars in each row to form a pyramid.
+
+**Output:**
+```
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+ *************
+***************
+```
+
+---
+
+## 5. Increasing Number Triangle
+
+**Code:**
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    for (i = 1; i <= 5; i++) {
+        printf("\n");
+        for (j = 1; j <= i; j++) {
+            printf("%d", j);
+        }
+    }
+    return 0;
+}
+```
+
+**Explanation:**  
+- Each row prints numbers from 1 up to the current row number.
+
+**Output:**
+```
+1
+12
+123
+1234
+12345
+```
+
+---
+
+## 6. Decreasing Number Triangle
+
+**Code:**
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    for (i = 5; i >= 1; i--) {
+        printf("\n");
+        for (j = 5; j >= i; j--) {
+            printf("%d", j);
+        }
+    }
+    return 0;
+}
+```
+
+**Explanation:**  
+- Each row prints numbers starting from 5 down to the current row number.
+
+**Output:**
+```
+5
+54
+543
+5432
+54321
+```
+
+---
+
+## 7. Solid Square Star Pattern
+
+**Code:**
+```c
+#include <stdio.h>
+
+int main() {
+    for (int i = 1; i <= 4; i++) {
+        for (int j = 1; j <= 4; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+**Explanation:**  
+- Prints a solid square of stars with 4 rows and 4 columns.
+
+**Output:**
+```
+****
+****
+****
+****
+```
+
+---
+
 ## Summary
 
 - Pattern programs use nested loops for rows and columns.
 - They are useful for practicing logic, loops, and output formatting in C.
-- Try modifying the code to create your
+- Try modifying the code to create your own patterns!
