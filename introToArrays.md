@@ -140,6 +140,22 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
+## Types of Arrays
+
+1. **One-Dimensional Arrays**  
+   - Stores a list of elements in a single row.
+   - Example: `int arr[5];`
+
+2. **Two-Dimensional Arrays**  
+   - Stores elements in a table (rows and columns), like a matrix.
+   - Example: `int matrix[3][4];`
+
+3. **Multi-Dimensional Arrays**  
+   - Arrays with more than two dimensions, used for complex data structures.
+   - Example: `int cube[2][3][4];`
+
+---
+
 ## Summary
 
 - Arrays store multiple values of the same type.
