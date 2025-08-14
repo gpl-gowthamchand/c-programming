@@ -97,6 +97,21 @@ Looping statements let you repeat a block of code multiple times.
   ```
   *Use case:* Menu-driven programs, input validation.
 
+- **Infinite Loops**  
+  Use when you want a loop to run forever until manually stopped (with `break` or exit key).
+  ```c
+  while (1) {
+      // runs forever
+  }
+  ```
+  Or:
+  ```c
+  for (;;) {
+      // also infinite
+  }
+  ```
+  *Use case:* Servers, embedded systems, waiting for events.
+
 ---
 
 ### 3. Jump Statements
@@ -148,7 +163,7 @@ Jump statements alter the normal flow of execution.
 ## Summary
 
 - Use **conditional statements** to make decisions (`if`, `switch`, ternary).
-- Use **looping statements** to repeat actions (`for`, `while`, `do-while`).
+- Use **looping statements** to repeat actions (`for`, `while`, `do-while`, infinite loops).
 - Use **jump statements** to change flow (`break`, `continue`, `return`, `goto`).
 
 Choose the right control flow statement based on your program's logic and requirements.
