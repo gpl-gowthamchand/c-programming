@@ -149,4 +149,4 @@ for (int i = 0; i < 5; i++) {
 - Use loops for processing arrays.
 - Avoid common mistakes like out-of-bounds access and uninitialized elements.
 
-Arrays are essential for handling collections of data efficiently in C
+Arrays are essential for efficiently handling collections of data in C programming.
