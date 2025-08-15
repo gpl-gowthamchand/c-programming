@@ -193,33 +193,48 @@ int main() {
 }
 ```
 
-### 12. Reversing array in-place (swap method)
+### 12. Reverse Array In-Place
+
+**Concept**
+
+To reverse an array, we swap the first and last elements, then the second and second-last, and so on until the middle.
+
+**Example:**
+
+Original:  [1, 2, 3, 4, 5]
+Reversed:  [5, 4, 3, 2, 1]
+
+**Code Example**
 ```c
 #include <stdio.h>
+
 int main() {
-    int arr[6] = {1, 2, 3, 4, 5, 6};
-    int temp;
-    
-    printf("Original array: ");
-    for (int i = 0; i < 6; i++) {
-        printf("%d ", arr[i]);
-    }
-    
-    // Reverse in-place
-    for (int i = 0; i < 6/2; i++) {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int i, temp;
+    int n = 5;
+
+    // Reverse using swap
+    for (i = 0; i < n / 2; i++) {
         temp = arr[i];
-        arr[i] = arr[5-i];
-        arr[5-i] = temp;
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = temp;
     }
-    
-    printf("\nReversed array: ");
-    for (int i = 0; i < 6; i++) {
+
+    // Print reversed array
+    printf("Reversed Array: ");
+    for (i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
-    printf("\n");
+
     return 0;
 }
 ```
+
+**Key Points**
+
+- We run the loop till n/2 because swapping beyond the middle would undo the reverse.
+- Time complexity: O(n).
+- Space complexity: O(1) (no extra array used).
 
 ### 13. Sorting array (basic bubble sort)
 ```c
