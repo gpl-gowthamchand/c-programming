@@ -236,37 +236,70 @@ int main() {
 - Time complexity: O(n).
 - Space complexity: O(1) (no extra array used).
 
-### 13. Sorting array (basic bubble sort)
+### 13. What is Bubble Sort?
+
+**Concept**
+
+It repeatedly compares adjacent elements and swaps them if they are in the wrong order.
+
+After each pass, the largest element "bubbles" to the end of the array.
+
+We repeat this process for all elements until the array is sorted.
+
+**Example Walkthrough**
+
+Sort [5, 2, 4, 1] in ascending order:
+
+**Pass 1:**
+- Compare 5 and 2 → swap → [2, 5, 4, 1]
+- Compare 5 and 4 → swap → [2, 4, 5, 1]
+- Compare 5 and 1 → swap → [2, 4, 1, 5]
+
+**Pass 2:**
+- Compare 2 and 4 → no swap → [2, 4, 1, 5]
+- Compare 4 and 1 → swap → [2, 1, 4, 5]
+
+**Pass 3:**
+- Compare 2 and 1 → swap → [1, 2, 4, 5]
+
+Now sorted.
+
+**Code Example**
 ```c
 #include <stdio.h>
+
 int main() {
-    int arr[5] = {64, 34, 25, 12, 22};
-    int temp;
-    
-    printf("Original array: ");
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", arr[i]);
-    }
-    
-    // Bubble sort
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4-i; j++) {
-            if (arr[j] > arr[j+1]) {
+    int arr[5] = {5, 2, 4, 1, 3};
+    int n = 5;
+    int i, j, temp;
+
+    // Bubble Sort
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap
                 temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
     }
-    
-    printf("\nSorted array: ");
-    for (int i = 0; i < 5; i++) {
+
+    // Print sorted array
+    printf("Sorted array: ");
+    for (i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
-    printf("\n");
+
     return 0;
 }
 ```
+
+**Key Points**
+
+- Time complexity: O(n²) in worst case.
+- Best case: O(n) (if array is already sorted, with optimization).
+- Space complexity: O(1) (in-place sorting).
 
 ## Additional Useful Examples
 
