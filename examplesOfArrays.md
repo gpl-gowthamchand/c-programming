@@ -713,6 +713,457 @@ Transpose matrix:
 
 ---
 
+## Multi-Dimensional Array Examples
+
+### 25. 3D Array Basics and Traversal
+
+**Concept**
+3D arrays can be visualized as a cube or multiple 2D matrices stacked on top of each other. They are useful for representing 3D space, time-series data, or complex data structures.
+
+**How It Works**
+- 3D arrays have three dimensions: depth, rows, and columns
+- Memory is allocated in row-major order
+- Use three nested loops for traversal: depth → rows → columns
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[2][3][4] = {
+        {{1, 2, 3, 4},     // First 2D matrix
+         {5, 6, 7, 8},
+         {9, 10, 11, 12}},
+        {{13, 14, 15, 16}, // Second 2D matrix
+         {17, 18, 19, 20},
+         {21, 22, 23, 24}}
+    };
+    
+    int depth = 2, rows = 3, cols = 4;
+    
+    // Traverse and print 3D array
+    printf("3D Array Elements:\n");
+    for (int d = 0; d < depth; d++) {
+        printf("Layer %d:\n", d + 1);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                printf("%2d ", arr[d][i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+3D Array Elements:
+Layer 1:
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+
+Layer 2:
+13 14 15 16
+17 18 19 20
+21 22 23 24
+```
+
+---
+
+### 26. Sum of 3D Array Elements
+
+**Concept**
+Calculate the sum of all elements in a 3D array by traversing through all three dimensions and accumulating the values.
+
+**How It Works**
+- Initialize a sum variable to 0
+- Use three nested loops to access each element
+- Add each element to the running total
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[2][2][3] = {
+        {{1, 2, 3}, {4, 5, 6}},
+        {{7, 8, 9}, {10, 11, 12}}
+    };
+    
+    int depth = 2, rows = 2, cols = 3;
+    int sum = 0;
+    
+    // Calculate sum of all elements
+    for (int d = 0; d < depth; d++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                sum += arr[d][i][j];
+            }
+        }
+    }
+    
+    printf("Sum of all elements: %d\n", sum);
+    printf("Total elements: %d\n", depth * rows * cols);
+    printf("Average: %.2f\n", (float)sum / (depth * rows * cols));
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Sum of all elements: 78
+Total elements: 12
+Average: 6.50
+```
+
+---
+
+### 27. Finding Maximum and Minimum in 3D Array
+
+**Concept**
+Find the largest and smallest values in a 3D array by comparing each element with the current maximum and minimum values.
+
+**How It Works**
+- Initialize max and min with the first element
+- Traverse through all dimensions comparing each element
+- Update max and min when larger/smaller values are found
+
+**Code Example**
+```c
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    int arr[3][2][2] = {
+        {{15, 23}, {8, 31}},
+        {{12, 19}, {25, 7}},
+        {{9, 14}, {18, 22}}
+    };
+    
+    int depth = 3, rows = 2, cols = 2;
+    int max = INT_MIN, min = INT_MAX;
+    int max_pos[3], min_pos[3]; // Store positions
+    
+    // Find max and min
+    for (int d = 0; d < depth; d++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (arr[d][i][j] > max) {
+                    max = arr[d][i][j];
+                    max_pos[0] = d; max_pos[1] = i; max_pos[2] = j;
+                }
+                if (arr[d][i][j] < min) {
+                    min = arr[d][i][j];
+                    min_pos[0] = d; min_pos[1] = i; min_pos[2] = j;
+                }
+            }
+        }
+    }
+    
+    printf("Maximum: %d at position [%d][%d][%d]\n", 
+           max, max_pos[0], max_pos[1], max_pos[2]);
+    printf("Minimum: %d at position [%d][%d][%d]\n", 
+           min, min_pos[0], min_pos[1], min_pos[2]);
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Maximum: 31 at position [0][1][1]
+Minimum: 7 at position [1][1][1]
+```
+
+---
+
+### 28. 3D Array Rotation (Layer by Layer)
+
+**Concept**
+Rotate each 2D layer of a 3D array independently. This is useful for 3D transformations, image processing, or data manipulation.
+
+**How It Works**
+- Treat each depth layer as a separate 2D matrix
+- Apply rotation algorithm to each layer
+- Can rotate clockwise, counterclockwise, or by specific angles
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[2][3][3] = {
+        {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},
+        {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}}
+    };
+    
+    int depth = 2, rows = 3, cols = 3;
+    int rotated[2][3][3];
+    
+    // Rotate each layer 90 degrees clockwise
+    for (int d = 0; d < depth; d++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                rotated[d][j][rows-1-i] = arr[d][i][j];
+            }
+        }
+    }
+    
+    // Print original array
+    printf("Original 3D Array:\n");
+    for (int d = 0; d < depth; d++) {
+        printf("Layer %d:\n", d + 1);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                printf("%2d ", arr[d][i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+    
+    // Print rotated array
+    printf("Rotated 3D Array (90° clockwise):\n");
+    for (int d = 0; d < depth; d++) {
+        printf("Layer %d:\n", d + 1);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                printf("%2d ", rotated[d][i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Original 3D Array:
+Layer 1:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+Layer 2:
+10 11 12
+13 14 15
+16 17 18
+
+Rotated 3D Array (90° clockwise):
+Layer 1:
+ 7  4  1
+ 8  5  2
+ 9  6  3
+
+Layer 2:
+16 13 10
+17 14 11
+18 15 12
+```
+
+---
+
+### 29. 4D Array Example (Time-Series Data)
+
+**Concept**
+4D arrays can represent data with four dimensions, such as time-series data, multiple 3D objects, or complex scientific data.
+
+**How It Works**
+- 4D arrays have four dimensions: time, depth, rows, columns
+- Useful for storing data that changes over time
+- Memory allocation follows the same row-major pattern
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    // 4D array: [time][depth][rows][columns]
+    int data[3][2][2][2] = {
+        {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}},     // Time 0
+        {{{9, 10}, {11, 12}}, {{13, 14}, {15, 16}}}, // Time 1
+        {{{17, 18}, {19, 20}}, {{21, 22}, {23, 24}}} // Time 2
+    };
+    
+    int time = 3, depth = 2, rows = 2, cols = 2;
+    
+    // Print 4D array structure
+    printf("4D Array Structure:\n");
+    for (int t = 0; t < time; t++) {
+        printf("Time %d:\n", t);
+        for (int d = 0; d < depth; d++) {
+            printf("  Layer %d:\n", d + 1);
+            for (int i = 0; i < rows; i++) {
+                printf("    ");
+                for (int j = 0; j < cols; j++) {
+                    printf("%2d ", data[t][d][i][j]);
+                }
+                printf("\n");
+            }
+        }
+        printf("\n");
+    }
+    
+    // Calculate sum for each time period
+    printf("Sum for each time period:\n");
+    for (int t = 0; t < time; t++) {
+        int sum = 0;
+        for (int d = 0; d < depth; d++) {
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < cols; j++) {
+                    sum += data[t][d][i][j];
+                }
+            }
+        }
+        printf("Time %d: %d\n", t, sum);
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+4D Array Structure:
+Time 0:
+  Layer 1:
+     1  2
+     3  4
+  Layer 2:
+     5  6
+     7  8
+
+Time 1:
+  Layer 1:
+     9 10
+    11 12
+  Layer 2:
+    13 14
+    15 16
+
+Time 2:
+  Layer 1:
+    17 18
+    19 20
+  Layer 2:
+    21 22
+    23 24
+
+Sum for each time period:
+Time 0: 36
+Time 1: 100
+Time 2: 164
+```
+
+---
+
+### 30. Dynamic Multi-Dimensional Array
+
+**Concept**
+Create multi-dimensional arrays dynamically using pointers and malloc. This allows for variable-sized arrays and more flexible memory management.
+
+**How It Works**
+- Use pointer arithmetic to create multi-dimensional arrays
+- Allocate memory for each dimension dynamically
+- Free memory properly to avoid memory leaks
+
+**Code Example**
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int depth = 3, rows = 4, cols = 5;
+    
+    // Allocate 3D array dynamically
+    int ***arr = (int ***)malloc(depth * sizeof(int **));
+    for (int d = 0; d < depth; d++) {
+        arr[d] = (int **)malloc(rows * sizeof(int *));
+        for (int i = 0; i < rows; i++) {
+            arr[d][i] = (int *)malloc(cols * sizeof(int));
+        }
+    }
+    
+    // Initialize with values
+    int value = 1;
+    for (int d = 0; d < depth; d++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[d][i][j] = value++;
+            }
+        }
+    }
+    
+    // Print the array
+    printf("Dynamic 3D Array:\n");
+    for (int d = 0; d < depth; d++) {
+        printf("Layer %d:\n", d + 1);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                printf("%3d ", arr[d][i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+    
+    // Free memory (important!)
+    for (int d = 0; d < depth; d++) {
+        for (int i = 0; i < rows; i++) {
+            free(arr[d][i]);
+        }
+        free(arr[d]);
+    }
+    free(arr);
+    
+    printf("Memory freed successfully!\n");
+    return 0;
+}
+```
+
+**Output:**
+```
+Dynamic 3D Array:
+Layer 1:
+  1   2   3   4   5
+  6   7   8   9  10
+ 11  12  13  14  15
+ 16  17  18  19  20
+
+Layer 2:
+ 21  22  23  24  25
+ 26  27  28  29  30
+ 31  32  33  34  35
+ 36  37  38  39  40
+
+Layer 3:
+ 41  42  43  44  45
+ 46  47  48  49  50
+ 51  52  53  54  55
+ 56  57  58  59  60
+
+Memory freed successfully!
+```
+
+## Key Points for Multi-Dimensional Arrays
+
+1. **Memory Layout**: Multi-dimensional arrays are stored in row-major order
+2. **Indexing**: Use multiple indices: arr[depth][row][column]
+3. **Memory Management**: Dynamic allocation requires careful memory management
+4. **Performance**: Cache performance decreases with more dimensions
+5. **Visualization**: 3D arrays can be thought of as layers of 2D matrices
+6. **Applications**: Useful for 3D graphics, scientific computing, and data analysis
+
+---
+
 ### 22. Addition of Two Matrices
 
 **Concept**
