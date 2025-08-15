@@ -453,3 +453,362 @@ int main() {
 - **Memory leaks when using dynamic arrays**
 
 These examples cover most common array operations and should help you understand how to work with arrays effectively in C programming.
+
+## 2D Array Examples
+
+### 19. Sum of All Elements in 2D Array
+
+**Concept**
+To find the sum of all elements in a 2D array, we need to iterate through each row and column, adding each element to a running total.
+
+**How It Works**
+- Use nested loops: outer loop for rows, inner loop for columns
+- Initialize a sum variable to 0
+- Add each element to the sum as we traverse the array
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    int rows = 3, cols = 3;
+    int sum = 0;
+    
+    // Calculate sum of all elements
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sum += arr[i][j];
+        }
+    }
+    
+    printf("Sum of all elements: %d\n", sum);
+    return 0;
+}
+```
+
+**Output:** Sum of all elements: 45
+
+---
+
+### 20. Sum of Each Row & Column
+
+**Concept**
+Calculate the sum of elements in each row separately and each column separately. This helps understand the distribution of values across the matrix.
+
+**How It Works**
+- For row sums: iterate through each row, sum elements in that row
+- For column sums: iterate through each column, sum elements in that column
+- Store results in separate arrays for row sums and column sums
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    int rows = 3, cols = 3;
+    int rowSum[3] = {0}, colSum[3] = {0};
+    
+    // Calculate row sums
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            rowSum[i] += arr[i][j];
+        }
+    }
+    
+    // Calculate column sums
+    for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < rows; i++) {
+            colSum[j] += arr[i][j];
+        }
+    }
+    
+    // Print row sums
+    printf("Row sums:\n");
+    for (int i = 0; i < rows; i++) {
+        printf("Row %d: %d\n", i+1, rowSum[i]);
+    }
+    
+    // Print column sums
+    printf("\nColumn sums:\n");
+    for (int j = 0; j < cols; j++) {
+        printf("Column %d: %d\n", j+1, colSum[j]);
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Row sums:
+Row 1: 6
+Row 2: 15
+Row 3: 24
+
+Column sums:
+Column 1: 12
+Column 2: 15
+Column 3: 18
+```
+
+---
+
+### 21. Transpose of a Matrix
+
+**Concept**
+The transpose of a matrix is obtained by interchanging rows and columns. If the original matrix is m×n, the transpose will be n×m.
+
+**How It Works**
+- Create a new matrix with swapped dimensions
+- Copy elements from position [i][j] to position [j][i]
+- This effectively flips the matrix over its main diagonal
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    int rows = 2, cols = 3;
+    int transpose[3][2];
+    
+    // Calculate transpose
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            transpose[j][i] = arr[i][j];
+        }
+    }
+    
+    // Print original matrix
+    printf("Original Matrix (%dx%d):\n", rows, cols);
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+    // Print transpose matrix
+    printf("\nTranspose Matrix (%dx%d):\n", cols, rows);
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Original Matrix (2x3):
+1 2 3
+4 5 6
+
+Transpose Matrix (3x2):
+1 4
+2 5
+3 6
+```
+
+---
+
+### 22. Addition of Two Matrices
+
+**Concept**
+Matrix addition is performed by adding corresponding elements from two matrices of the same dimensions. The result is a matrix of the same size.
+
+**How It Works**
+- Check if both matrices have the same dimensions
+- Create a result matrix of the same size
+- Add corresponding elements: result[i][j] = matrix1[i][j] + matrix2[i][j]
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int matrix1[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    int matrix2[2][3] = {
+        {7, 8, 9},
+        {10, 11, 12}
+    };
+    int result[2][3];
+    int rows = 2, cols = 3;
+    
+    // Add matrices
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            result[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
+    }
+    
+    // Print first matrix
+    printf("Matrix 1:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", matrix1[i][j]);
+        }
+        printf("\n");
+    }
+    
+    // Print second matrix
+    printf("\nMatrix 2:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", matrix2[i][j]);
+        }
+        printf("\n");
+    }
+    
+    // Print result matrix
+    printf("\nResult (Matrix 1 + Matrix 2):\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Matrix 1:
+1 2 3
+4 5 6
+
+Matrix 2:
+7 8 9
+10 11 12
+
+Result (Matrix 1 + Matrix 2):
+8 10 12
+14 16 18
+```
+
+---
+
+### 23. Multiplication of Two Matrices
+
+**Concept**
+Matrix multiplication is more complex than addition. For matrices A(m×n) and B(n×p), the result C(m×p) is calculated using the dot product of rows and columns.
+
+**How It Works**
+- For each element C[i][j], multiply row i of matrix A with column j of matrix B
+- Sum up all the products: C[i][j] = Σ(A[i][k] × B[k][j]) for k = 0 to n-1
+- The number of columns in first matrix must equal rows in second matrix
+
+**Code Example**
+```c
+#include <stdio.h>
+
+int main() {
+    int matrix1[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    int matrix2[3][2] = {
+        {7, 8},
+        {9, 10},
+        {11, 12}
+    };
+    int result[2][2];
+    int rows1 = 2, cols1 = 3, cols2 = 2;
+    
+    // Initialize result matrix with zeros
+    for (int i = 0; i < rows1; i++) {
+        for (int j = 0; j < cols2; j++) {
+            result[i][j] = 0;
+        }
+    }
+    
+    // Multiply matrices
+    for (int i = 0; i < rows1; i++) {
+        for (int j = 0; j < cols2; j++) {
+            for (int k = 0; k < cols1; k++) {
+                result[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+        }
+    }
+    
+    // Print first matrix
+    printf("Matrix 1 (2x3):\n");
+    for (int i = 0; i < rows1; i++) {
+        for (int j = 0; j < cols1; j++) {
+            printf("%d ", matrix1[i][j]);
+        }
+        printf("\n");
+    }
+    
+    // Print second matrix
+    printf("\nMatrix 2 (3x2):\n");
+    for (int i = 0; i < cols1; i++) {
+        for (int j = 0; j < cols2; j++) {
+            printf("%d ", matrix2[i][j]);
+        }
+        printf("\n");
+    }
+    
+    // Print result matrix
+    printf("\nResult (Matrix 1 × Matrix 2):\n");
+    for (int i = 0; i < rows1; i++) {
+        for (int j = 0; j < cols2; j++) {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+**Output:**
+```
+Matrix 1 (2x3):
+1 2 3
+4 5 6
+
+Matrix 2 (3x2):
+7 8
+9 10
+11 12
+
+Result (Matrix 1 × Matrix 2):
+58 64
+139 154
+```
+
+**How Matrix Multiplication Works:**
+- C[0][0] = (1×7) + (2×9) + (3×11) = 7 + 18 + 33 = 58
+- C[0][1] = (1×8) + (2×10) + (3×12) = 8 + 20 + 36 = 64
+- C[1][0] = (4×7) + (5×9) + (6×11) = 28 + 45 + 66 = 139
+- C[1][1] = (4×8) + (5×10) + (6×12) = 32 + 50 + 72 = 154
+
+## Key Points for 2D Arrays
+
+1. **Memory Layout**: 2D arrays are stored in row-major order in memory
+2. **Indexing**: Use arr[row][column] notation
+3. **Bounds Checking**: Always verify array dimensions before operations
+4. **Matrix Operations**: Ensure compatible dimensions for operations
+5. **Performance**: Matrix multiplication has O(n³) complexity for n×n matrices
