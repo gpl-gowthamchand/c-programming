@@ -628,6 +628,91 @@ Transpose Matrix (3x2):
 
 ---
 
+### 24. In-Place Transpose (Square Matrix)
+
+**Concept**
+In-place transpose modifies the original matrix without creating a new one. This is only possible for square matrices (n×n) and requires careful swapping to avoid double-swapping elements.
+
+**How It Works**
+- Only swap elements above the main diagonal with elements below it
+- Use j = i + 1 to ensure we don't swap elements twice
+- This approach saves memory but only works for square matrices
+
+**Why j = i + 1?**
+If we swap for all i and j, we end up swapping back. The i+1 ensures we only swap the upper triangle with the lower triangle once.
+
+**Code Example**
+```c
+#include <stdio.h>
+int main() {
+    int i, j, temp;
+    int matrix[3][3];
+
+    // Input
+    printf("Enter 9 elements for 3x3 matrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    // Print original matrix
+    printf("Matrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    // In-place transpose
+    for (i = 0; i < 3; i++) {
+        for (j = i + 1; j < 3; j++) {  // only swap elements above diagonal
+            temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    }
+
+    // Print transpose matrix
+    printf("Transpose matrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+**Sample Input/Output:**
+```
+Enter 9 elements for 3x3 matrix:
+1 2 3
+4 5 6
+7 8 9
+
+Matrix:
+1 2 3
+4 5 6
+7 8 9
+
+Transpose matrix:
+1 4 7
+2 5 8
+3 6 9
+```
+
+**Key Points:**
+- **Memory Efficient**: Uses O(1) extra space instead of O(n²)
+- **Square Matrix Only**: Works only for n×n matrices
+- **Smart Swapping**: j = i + 1 prevents double-swapping
+- **Diagonal Elements**: Stay in place (no swapping needed)
+
+---
+
 ### 22. Addition of Two Matrices
 
 **Concept**
