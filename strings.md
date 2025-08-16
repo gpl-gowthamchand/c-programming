@@ -34,6 +34,62 @@ char str4[10] = {'C', 'P', 'r', 'o', 'g', '\0'};
 char *str5 = "String Literal";
 ```
 
+**⚠️ IMPORTANT: String Literals vs Character Arrays**
+
+There's a crucial difference between string literals and character arrays that affects whether you can modify them:
+
+#### String Literals (Read-Only)
+```c
+char *str_literal = "Hello World";  // String literal - stored in read-only memory
+// str_literal[0] = 'X';  // ❌ WRONG! This will cause runtime error (segmentation fault)
+```
+
+#### Character Arrays (Modifiable)
+```c
+char str_array[] = "Hello World";   // Character array - stored in stack memory
+str_array[0] = 'X';                 // ✅ CORRECT! This works fine
+printf("Modified: %s\n", str_array); // Output: "Xello World"
+```
+
+#### Why This Difference Matters?
+
+1. **String Literals** are stored in read-only memory segments
+2. **Character Arrays** are stored in the stack (modifiable memory)
+3. **Attempting to modify a string literal** causes undefined behavior (usually segmentation fault)
+
+#### Complete Example Demonstrating the Difference
+```c
+#include <stdio.h>
+
+int main() {
+    // Method 1: String literal (read-only)
+    char *literal = "Programming";
+    printf("Original literal: %s\n", literal);
+    
+    // literal[0] = 'X';  // ❌ This will crash the program!
+    
+    // Method 2: Character array (modifiable)
+    char array[] = "Programming";
+    printf("Original array: %s\n", array);
+    
+    array[0] = 'X';  // ✅ This works perfectly
+    printf("Modified array: %s\n", array);  // Output: "Xrogramming"
+    
+    // Method 3: Individual characters with null terminator
+    char custom[] = {'P', 'r', 'o', 'g', 'r', 'a', 'm', 'm', 'i', 'n', 'g', '\0'};
+    custom[1] = 'X';  // ✅ This also works
+    printf("Custom modified: %s\n", custom);  // Output: "PXogramming"
+    
+    return 0;
+}
+```
+
+#### Best Practices
+- **Use character arrays** when you need to modify the string
+- **Use string literals** only for constant, read-only strings
+- **Be careful** with `char *` declarations - they might point to read-only memory
+- **Always initialize** character arrays properly to avoid undefined behavior
+
 ## How Strings are Stored
 
 Strings are stored as arrays of characters in contiguous memory locations. Each character occupies 1 byte, and the string ends with a null character (`\0`).
@@ -423,6 +479,17 @@ int age;
 scanf("%d", &age);
 ```
 
+### 6. Never Modify String Literals
+```c
+// WRONG - This will crash your program!
+char *literal = "Hello";
+literal[0] = 'X';  // ❌ Segmentation fault!
+
+// CORRECT - Use character arrays for modifiable strings
+char array[] = "Hello";
+array[0] = 'X';    // ✅ This works fine
+```
+
 ## Summary
 
 - **Strings** are arrays of characters terminated by `\0`
@@ -435,5 +502,6 @@ scanf("%d", &age);
 - **Use safe functions** like `fgets()` instead of `gets()`
 - **Check buffer sizes** to prevent overflow
 - **No `&` symbol** needed when using `scanf()` with strings (unlike other data types)
+- **String literals are read-only** - never modify them (use character arrays instead)
 
 Understanding strings is fundamental to C programming, as they're used extensively in text processing, user input, and data manipulation.
