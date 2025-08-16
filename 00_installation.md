@@ -1,4 +1,4 @@
-# Installation Guide for Fedora Workstation 42
+# Installation Guide for Fedora Workstation 42 (Linux)
 
 > **Note**: This is my personal setup and recommended installation method for VS Code on Fedora Workstation 42. I've tested this approach and found it to be the most reliable way to get VS Code running on this distribution.
 
@@ -86,13 +86,6 @@ After installing VS Code, consider installing these extensions for C programming
 2. **C/C++ Extension Pack** by Microsoft
 3. **Code Runner** by Jun Han
 4. **GitLens** by GitKraken
-
-## System Requirements
-
-- Fedora Workstation 42 (or later)
-- At least 1GB of available disk space
-- 512MB RAM minimum (1GB recommended)
-- Internet connection for initial setup and extensions
 
 ## Troubleshooting
 
