@@ -1,11 +1,14 @@
 # Tokens in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [Basic Structure](01_basic_structure.c) | [README](README.md) | [Identifiers & Variables](03_identifiers_variables.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](01_basic_structure.c) | [🏠 Home](README.md) | [➡️ Next](03_identifiers_variables.md)
+
+</div>
 
 ---
+
 
 In C programming, **tokens** are the smallest units of a program that have meaning to the compiler.  
 They are the building blocks for writing C programs.
@@ -54,3 +57,12 @@ Tokens are fundamental to understanding how C programs are structured and interp
 | [Basic Structure](01_basic_structure.c) | [README](README.md) | [Identifiers & Variables](03_identifiers_variables.md) |
 
 [⬆️ Back to Top](#tokens-in-c-programming)
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](01_basic_structure.c) | [🏠 Home](README.md) | [➡️ Next](03_identifiers_variables.md)
+
+</div>

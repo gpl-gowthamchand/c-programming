@@ -1,11 +1,14 @@
 # File Handling in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [17 Dynamic Memory Allocation](17_dynamic_memory_allocation.md) | [README](README.md) | [19 Storage Classes](19_storage_classes.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](17_dynamic_memory_allocation.md) | [🏠 Home](README.md) | [➡️ Next](19_storage_classes.md)
+
+</div>
 
 ---
+
 
 ## Overview
 File handling in C allows you to create, read, write, and manipulate files on your computer's storage. C provides a set of functions in the `<stdio.h>` header file for file operations.
@@ -301,3 +304,13 @@ int main(int argc, char *argv[]) {
 
 ## Summary
 File handling in C provides powerful tools for working with files. Understanding the different modes, functions, and proper error handling is essential for creating robust file-based applications. Always remember to open, use, and close files properly to avoid resource leaks and ensure data integrity.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](17_dynamic_memory_allocation.md) | [🏠 Home](README.md) | [➡️ Next](19_storage_classes.md)
+
+</div>

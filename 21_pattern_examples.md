@@ -1,11 +1,14 @@
 # Pattern Programs in C
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [20 Typedef](20_typedef.md) | [README](README.md) | - |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](20_typedef.md) | [🏠 Home](README.md) | [➡️ Next](21_pattern_examples.md)
+
+</div>
 
 ---
+
 
 Pattern programs are commonly used to practice loops and understand control flow in C.  
 They help visualize how nested loops work and how output can be formatted.
@@ -258,3 +261,12 @@ int main() {
 - Pattern programs use nested loops for rows and columns.
 - They are useful for practicing logic, loops, and output formatting in C.
 - Try modifying the code to create your own patterns!
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](20_typedef.md) | [🏠 Home](README.md) | [➡️ Next](21_pattern_examples.md)
+
+</div>

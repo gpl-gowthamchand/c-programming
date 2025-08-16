@@ -1,11 +1,14 @@
 # Examples of Arrays in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [10 Types Of Arrays](10_types_of_arrays.md) | [README](README.md) | [12 Strings](12_strings.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](10_types_of_arrays.md) | [🏠 Home](README.md) | [➡️ Next](12_strings.md)
+
+</div>
 
 ---
+
 
 This document contains various practical examples demonstrating array operations in C programming.
 
@@ -1355,3 +1358,13 @@ Result (Matrix 1 × Matrix 2):
 3. **Bounds Checking**: Always verify array dimensions before operations
 4. **Matrix Operations**: Ensure compatible dimensions for operations
 5. **Performance**: Matrix multiplication has O(n³) complexity for n×n matrices
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](10_types_of_arrays.md) | [🏠 Home](README.md) | [➡️ Next](12_strings.md)
+
+</div>

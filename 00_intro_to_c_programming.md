@@ -1,11 +1,14 @@
 # Introduction to C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [Installation Guide](00_installation.md) | [README](README.md) | [Basic Structure](01_basic_structure.c) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](00_installation.md) | [🏠 Home](README.md) | [➡️ Next](01_basic_structure.c)
+
+</div>
 
 ---
+
 
 ## 🤔 What is C Programming?
 
@@ -252,3 +255,13 @@ Remember: **Every expert was once a beginner**. Take your time, ask questions, a
 ---
 
 *"The only way to learn a new programming language is by writing programs in it."* - Dennis Ritchie
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](00_installation.md) | [🏠 Home](README.md) | [➡️ Next](01_basic_structure.c)
+
+</div>

@@ -1,11 +1,14 @@
 # Enumerations (Enums) in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [14 Unions](14_unions.md) | [README](README.md) | [16 Pointers](16_pointers.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](14_unions.md) | [🏠 Home](README.md) | [➡️ Next](16_pointers.md)
+
+</div>
 
 ---
+
 
 ## What are Enums?
 
@@ -302,3 +305,13 @@ int main() {
 ## Summary
 
 Enums in C provide a clean way to define sets of related constants. They improve code readability and maintainability by giving meaningful names to integer values. While they don't provide the same level of type safety as some other languages, they are a fundamental and useful feature of C programming.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](14_unions.md) | [🏠 Home](README.md) | [➡️ Next](16_pointers.md)
+
+</div>

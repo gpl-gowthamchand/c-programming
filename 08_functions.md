@@ -1,11 +1,14 @@
 # Functions in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [07 Control Flow](07_control_flow.md) | [README](README.md) | [09 Intro To Arrays](09_intro_to_arrays.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](07_control_flow.md) | [🏠 Home](README.md) | [➡️ Next](09_intro_to_arrays.md)
+
+</div>
 
 ---
+
 
 Functions are blocks of code designed to perform a specific task.  
 They help organize code, promote reusability, and make programs easier to read and maintain.
@@ -206,3 +209,12 @@ int multiply(int x, int y) {
 - Always declare functions before using them (or define them above `main()`).
 - Choose the right function type based on whether you need arguments and/or a return value.
 - Use functions to organize logic, avoid repetition, and improve code clarity.
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](07_control_flow.md) | [🏠 Home](README.md) | [➡️ Next](09_intro_to_arrays.md)
+
+</div>

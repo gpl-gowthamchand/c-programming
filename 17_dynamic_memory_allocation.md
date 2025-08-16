@@ -1,11 +1,14 @@
 # Dynamic Memory Allocation in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [16 Pointers](16_pointers.md) | [README](README.md) | [18 File Handling](18_file_handling.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](16_pointers.md) | [🏠 Home](README.md) | [➡️ Next](18_file_handling.md)
+
+</div>
 
 ---
+
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -866,3 +869,13 @@ Dynamic memory allocation is a powerful feature in C that provides flexibility a
 6. **Follow best practices** for robust and maintainable code
 
 Mastering dynamic memory allocation is essential for writing efficient and scalable C programs. Practice with the examples provided and always remember to manage memory responsibly.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](16_pointers.md) | [🏠 Home](README.md) | [➡️ Next](18_file_handling.md)
+
+</div>

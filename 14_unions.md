@@ -1,11 +1,14 @@
 # Unions in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [13 Structures](13_structures.md) | [README](README.md) | [15 Enums](15_enums.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](13_structures.md) | [🏠 Home](README.md) | [➡️ Next](15_enums.md)
+
+</div>
 
 ---
+
 
 ## What are Unions?
 
@@ -266,3 +269,13 @@ Unions are powerful tools in C for:
 - Protocol implementation
 
 Remember that unions share memory, so only one member should be active at a time. Always use proper type tracking to avoid undefined behavior.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](13_structures.md) | [🏠 Home](README.md) | [➡️ Next](15_enums.md)
+
+</div>

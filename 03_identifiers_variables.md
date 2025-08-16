@@ -1,11 +1,14 @@
 # Identifiers and Variables in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [Tokens](02_tokens.md) | [README](README.md) | [Data Types](04_data_types.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](02_tokens.md) | [🏠 Home](README.md) | [➡️ Next](04_data_types.md)
+
+</div>
 
 ---
+
 
 ## Identifiers
 
@@ -155,3 +158,12 @@ Identifiers, variables, and constants are fundamental for organizing and managin
 | [Tokens](02_tokens.md) | [README](README.md) | [Data Types](04_data_types.md) |
 
 [⬆️ Back to Top](#identifiers-and-variables-in-c-programming)
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](02_tokens.md) | [🏠 Home](README.md) | [➡️ Next](04_data_types.md)
+
+</div>

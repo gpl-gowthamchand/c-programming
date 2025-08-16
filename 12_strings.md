@@ -1,11 +1,14 @@
 # Strings in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [11 Array Examples](11_array_examples.md) | [README](README.md) | [13 Structures](13_structures.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](11_array_examples.md) | [🏠 Home](README.md) | [➡️ Next](13_structures.md)
+
+</div>
 
 ---
+
 
 ## What is a String?
 
@@ -512,3 +515,13 @@ array[0] = 'X';    // ✅ This works fine
 - **String literals are read-only** - never modify them (use character arrays instead)
 
 Understanding strings is fundamental to C programming, as they're used extensively in text processing, user input, and data manipulation.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](11_array_examples.md) | [🏠 Home](README.md) | [➡️ Next](13_structures.md)
+
+</div>

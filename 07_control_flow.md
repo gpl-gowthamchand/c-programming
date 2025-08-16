@@ -1,11 +1,14 @@
 # Control Flow Statements in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [06 Input Output](06_input_output.md) | [README](README.md) | [08 Functions](08_functions.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](06_input_output.md) | [🏠 Home](README.md) | [➡️ Next](08_functions.md)
+
+</div>
 
 ---
+
 
 Control flow statements determine the order in which instructions are executed in a C program.  
 They allow you to make decisions, repeat actions, and jump to different parts of your code, making your programs flexible and logical.
@@ -174,3 +177,12 @@ Jump statements alter the normal flow of execution.
 - Use **jump statements** to change flow (`break`, `continue`, `return`, `goto`).
 
 Choose the right control flow statement based on your program's logic and requirements.
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](06_input_output.md) | [🏠 Home](README.md) | [➡️ Next](08_functions.md)
+
+</div>

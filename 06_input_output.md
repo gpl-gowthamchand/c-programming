@@ -1,11 +1,14 @@
 # Input and Output in C Programming
 
-## 🧭 **Navigation**
-| ⬅️ Previous | 🏠 Home | ➡️ Next |
-|:------------|:--------|:--------|
-| [05 Operators](05_operators.md) | [README](README.md) | [07 Control Flow](07_control_flow.md) |
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](05_operators.md) | [🏠 Home](README.md) | [➡️ Next](07_control_flow.md)
+
+</div>
 
 ---
+
 
 Input and output (I/O) operations allow a C program to interact with the user or other systems.  
 The standard library provides functions for reading input and displaying output.
@@ -105,3 +108,12 @@ puts(line);                      // prints the string
 - For safe string input, prefer `fgets()` over `gets()`.
 
 Input and output are essential for interactive C programs and for communicating with users.
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](05_operators.md) | [🏠 Home](README.md) | [➡️ Next](07_control_flow.md)
+
+</div>
