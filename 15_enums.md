@@ -1,5 +1,15 @@
 # Enumerations (Enums) in C Programming
 
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](14_unions.md) | [🏠 Home](README.md) | [➡️ Next](16_pointers.md)
+
+</div>
+
+---
+
+
 ## What are Enums?
 
 Enumerations (enums) are user-defined data types in C that consist of a set of named integer constants. They provide a way to create symbolic names for integer values, making code more readable and maintainable.
@@ -295,3 +305,13 @@ int main() {
 ## Summary
 
 Enums in C provide a clean way to define sets of related constants. They improve code readability and maintainability by giving meaningful names to integer values. While they don't provide the same level of type safety as some other languages, they are a fundamental and useful feature of C programming.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](14_unions.md) | [🏠 Home](README.md) | [➡️ Next](16_pointers.md)
+
+</div>

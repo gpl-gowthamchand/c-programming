@@ -1,5 +1,15 @@
 # Storage Classes in C Programming
 
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](18_file_handling.md) | [🏠 Home](README.md) | [➡️ Next](20_typedef.md)
+
+</div>
+
+---
+
+
 Storage classes in C determine the scope, lifetime, and memory location of variables. They control how variables are stored in memory and how long they persist during program execution.
 
 ## Types of Storage Classes
@@ -201,3 +211,13 @@ const char* CONFIG_FILE = "config.txt";
 - `static` variables are optimized for memory access
 - `const` variables may be placed in read-only memory
 - Storage class affects variable initialization and cleanup
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](18_file_handling.md) | [🏠 Home](README.md) | [➡️ Next](20_typedef.md)
+
+</div>

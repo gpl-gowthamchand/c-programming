@@ -1,5 +1,15 @@
 # Types of Arrays in C Programming
 
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](09_intro_to_arrays.md) | [🏠 Home](README.md) | [➡️ Next](11_array_examples.md)
+
+</div>
+
+---
+
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [One-Dimensional Arrays](#one-dimensional-arrays)
@@ -611,3 +621,13 @@ Understanding these types, their proper usage, and common pitfalls is essential 
 - Free dynamically allocated memory
 - Use appropriate array types for your use case
 - Consider performance implications of access patterns
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](09_intro_to_arrays.md) | [🏠 Home](README.md) | [➡️ Next](11_array_examples.md)
+
+</div>

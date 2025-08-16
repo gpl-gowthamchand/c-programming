@@ -1,5 +1,15 @@
 # Unions in C Programming
 
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](13_structures.md) | [🏠 Home](README.md) | [➡️ Next](15_enums.md)
+
+</div>
+
+---
+
+
 ## What are Unions?
 
 A union is a special data type in C that allows you to store different data types in the same memory location. Unlike structures, unions can only hold one member value at a time, and all members share the same memory space.
@@ -259,3 +269,13 @@ Unions are powerful tools in C for:
 - Protocol implementation
 
 Remember that unions share memory, so only one member should be active at a time. Always use proper type tracking to avoid undefined behavior.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](13_structures.md) | [🏠 Home](README.md) | [➡️ Next](15_enums.md)
+
+</div>

@@ -1,5 +1,15 @@
 # Operators in C Programming
 
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](04_data_types.md) | [🏠 Home](README.md) | [➡️ Next](06_input_output.md)
+
+</div>
+
+---
+
+
 Operators are special symbols that perform operations on variables and values.  
 They are essential for manipulating data and controlling program flow.
 
@@ -189,3 +199,12 @@ For example, in `a + b * c`, multiplication is performed before addition.
 - Unary operators work on one operand; binary operators work on two.
 - Operator precedence affects how expressions are evaluated.
 - Understanding operators is key to writing efficient and correct C programs.
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](04_data_types.md) | [🏠 Home](README.md) | [➡️ Next](06_input_output.md)
+
+</div>

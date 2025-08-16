@@ -1,5 +1,15 @@
 # Strings in C Programming
 
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](11_array_examples.md) | [🏠 Home](README.md) | [➡️ Next](13_structures.md)
+
+</div>
+
+---
+
+
 ## What is a String?
 
 A string in C is a sequence of characters terminated by a null character (`\0`). It's essentially an array of characters where the last element is the null terminator.
@@ -505,3 +515,13 @@ array[0] = 'X';    // ✅ This works fine
 - **String literals are read-only** - never modify them (use character arrays instead)
 
 Understanding strings is fundamental to C programming, as they're used extensively in text processing, user input, and data manipulation.
+
+
+---
+
+<div align="right">
+
+**🧭 Navigation**  
+[⬅️ Previous](11_array_examples.md) | [🏠 Home](README.md) | [➡️ Next](13_structures.md)
+
+</div>
