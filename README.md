@@ -38,6 +38,7 @@ This repository contains organized learning materials covering all fundamental C
 
 ### 🎨 **Practice & Examples**
 - [21. Pattern Examples](21_pattern_examples.md) - Common programming patterns
+- [22. Community Contributions](contributions/) - Code examples and projects from the community
 
 ## 🚀 Quick Start
 
@@ -100,6 +101,7 @@ Found any mistakes, errors, or areas that need improvement? Your contributions a
 - ✅ Better code formatting
 - ✅ New C programming topics
 - ✅ Translation to other languages
+- ✅ **Code examples and projects** - Share your C programs in the [contributions](contributions/) folder
 
 ## 📖 Learning Path
 
