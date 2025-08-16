@@ -1,5 +1,7 @@
 # Installation Guide for Fedora Workstation 42
 
+> **Note**: This is my personal setup and recommended installation method for VS Code on Fedora Workstation 42. I've tested this approach and found it to be the most reliable way to get VS Code running on this distribution.
+
 This guide covers the installation of Microsoft Visual Studio Code on Fedora Workstation 42, which is the recommended development environment for C programming.
 
 ## Method 1: Official Repository Installation (Recommended)
