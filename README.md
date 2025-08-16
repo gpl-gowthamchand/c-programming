@@ -7,36 +7,37 @@ This is C programming made for beginners. I made this comprehensive learning res
 This repository contains organized learning materials covering all fundamental C programming concepts:
 
 ### 🚀 **Getting Started**
-- [Basic Structure](basicStrucure.c) - Your first C program and basic syntax
-- [Tokens](tokens.md) - Understanding C program building blocks
-- [Identifiers & Variables](identifiers_variables.md) - Naming conventions and variable declaration
-- [Data Types](data_types.md) - Integer, float, char, and other data types
+- [00. Installation](00_installation.md) - Setting up your C programming environment
+- [00. Introduction to C Programming](00_intro_to_c_programming.md) - Overview and fundamentals
+- [01. Basic Structure](01_basic_structure.c) - Your first C program and basic syntax
+- [02. Tokens](02_tokens.md) - Understanding C program building blocks
+- [03. Identifiers & Variables](03_identifiers_variables.md) - Naming conventions and variable declaration
+- [04. Data Types](04_data_types.md) - Integer, float, char, and other data types
 
 ### 🔧 **Core Concepts**
-- [Operators](operators.md) - Arithmetic, logical, and bitwise operators
-- [Input/Output](input_output.md) - Reading input and displaying output
-- [Control Flow](controlFlow.md) - If statements, loops, and decision making
-- [Functions](functions.md) - Creating and using functions
+- [05. Operators](05_operators.md) - Arithmetic, logical, and bitwise operators
+- [06. Input/Output](06_input_output.md) - Reading input and displaying output
+- [07. Control Flow](07_control_flow.md) - If statements, loops, and decision making
+- [08. Functions](08_functions.md) - Creating and using functions
 
 ### 📊 **Data Structures**
-- [Introduction to Arrays](introToArrays.md) - Basic array concepts
-- [Types of Arrays](typesOfArrays.md) - Different array variations
-- [Array Examples](examplesOfArrays.md) - Practical array implementations
-- [Strings](strings.md) - Working with character arrays
-- [Structures](structures.md) - Creating custom data types
-- [Unions](unions.md) - Memory-efficient data structures
-- [Enums](enums.md) - Enumerated types
+- [09. Introduction to Arrays](09_intro_to_arrays.md) - Basic array concepts
+- [10. Types of Arrays](10_types_of_arrays.md) - Different array variations
+- [11. Array Examples](11_array_examples.md) - Practical array implementations
+- [12. Strings](12_strings.md) - Working with character arrays
+- [13. Structures](13_structures.md) - Creating custom data types
+- [14. Unions](14_unions.md) - Memory-efficient data structures
+- [15. Enums](15_enums.md) - Enumerated types
 
 ### 🎯 **Advanced Topics**
-- [Pointers](pointers.md) - Memory addresses and pointer arithmetic
-- [Dynamic Memory Allocation](dynamic_memory_allocation.md) - malloc, calloc, realloc, free
-- [File Handling](file_handling.md) - Reading and writing files
-- [Storage Classes](storage_classes.md) - auto, static, extern, register
-- [Typedef](typedef.md) - Creating type aliases
+- [16. Pointers](16_pointers.md) - Memory addresses and pointer arithmetic
+- [17. Dynamic Memory Allocation](17_dynamic_memory_allocation.md) - malloc, calloc, realloc, free
+- [18. File Handling](18_file_handling.md) - Reading and writing files
+- [19. Storage Classes](19_storage_classes.md) - auto, static, extern, register
+- [20. Typedef](20_typedef.md) - Creating type aliases
 
 ### 🎨 **Practice & Examples**
-- [Pattern Examples](patternsExamples.md) - Common programming patterns
-- [Output Examples](output/) - Compiled program outputs
+- [21. Pattern Examples](21_pattern_examples.md) - Common programming patterns
 
 ## 🚀 Quick Start
 
@@ -47,12 +48,12 @@ This repository contains organized learning materials covering all fundamental C
 ### Running Your First Program
 1. **Compile the code:**
    ```bash
-   gcc basicStrucure.c -o basicStrucure
+   gcc 01_basic_structure.c -o basic_structure
    ```
 
 2. **Run the executable:**
    ```bash
-   ./basicStrucure
+   ./basic_structure
    ```
 
 ### Example Program
@@ -103,12 +104,13 @@ Found any mistakes, errors, or areas that need improvement? Your contributions a
 ## 📖 Learning Path
 
 We recommend following this order for beginners:
-1. Start with [Basic Structure](basicStrucure.c)
-2. Learn about [Data Types](data_types.md) and [Variables](identifiers_variables.md)
-3. Understand [Operators](operators.md) and [Control Flow](controlFlow.md)
-4. Practice with [Functions](functions.md) and [Arrays](introToArrays.md)
-5. Advance to [Pointers](pointers.md) and [Structures](structures.md)
-6. Explore [File Handling](file_handling.md) and [Memory Management](dynamic_memory_allocation.md)
+1. Start with [00. Installation](00_installation.md) and [00. Introduction](00_intro_to_c_programming.md)
+2. Learn [01. Basic Structure](01_basic_structure.c) and [02. Tokens](02_tokens.md)
+3. Understand [03. Data Types](03_identifiers_variables.md) and [04. Variables](04_data_types.md)
+4. Practice [05. Operators](05_operators.md) and [07. Control Flow](07_control_flow.md)
+5. Work with [08. Functions](08_functions.md) and [09. Arrays](09_intro_to_arrays.md)
+6. Advance to [16. Pointers](16_pointers.md) and [13. Structures](13_structures.md)
+7. Explore [18. File Handling](18_file_handling.md) and [17. Memory Management](17_dynamic_memory_allocation.md)
 
 ## 🎯 Learning Goals
 
@@ -130,9 +132,9 @@ By the end of this course, you'll be able to:
 
 This learning resource wouldn't be possible without the help of:
 
-- **[GeeksforGeeks](https://www.geeksforgeeks.org/)** - Comprehensive programming tutorials and examples
+- **[GeeksforGeeks](https://www.geeksforgeeks.org/)** - Programming tutorials and examples
 - **[ChatGPT](https://chat.openai.com/)** - AI assistance for content creation and explanations
-- **[Cursor](https://cursor.sh/)** - The amazing AI-powered code editor that made development efficient
+- **[Cursor](https://cursor.sh/)** - For code automation
 
 ## 📄 License
 
