@@ -50,6 +50,26 @@ flatpak install flathub com.visualstudio.code
 flatpak run com.visualstudio.code
 ```
 
+## Installation for Other Operating Systems
+
+### Windows Users
+If you're using Windows, you can download VS Code directly from Microsoft's official website:
+- **Download VS Code for Windows**: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+- **Windows Installation Guide**: [https://code.visualstudio.com/docs/setup/windows](https://code.visualstudio.com/docs/setup/windows)
+
+The Windows installer will automatically handle all dependencies and add VS Code to your Start Menu.
+
+### macOS Users
+For macOS users, VS Code is also available through multiple methods:
+- **Download VS Code for macOS**: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+- **macOS Installation Guide**: [https://code.visualstudio.com/docs/setup/mac](https://code.visualstudio.com/docs/setup/mac)
+- **Install via Homebrew**: `brew install --cask visual-studio-code`
+
+### Other Linux Distributions
+If you're using a different Linux distribution:
+- **Linux Installation Guide**: [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
+- **Snap Package**: `sudo snap install code --classic` (for Ubuntu and other snap-supported distros)
+
 ## Why VS Code for C Programming?
 
 - **Integrated Terminal**: Built-in terminal for compiling and running C programs
