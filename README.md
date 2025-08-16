@@ -11,7 +11,7 @@ This repository contains organized learning materials covering all fundamental C
 ### 🚀 **Getting Started**
 - [00. Installation](00_installation.md) - Setting up your C programming environment
 - [00. Introduction to C Programming](00_intro_to_c_programming.md) - Overview and fundamentals
-- [01. Basic Structure](01_basic_structure.c) - Your first C program and basic syntax
+- [01. Basic Structure](01_basic_structure.md) - Your first C program and basic syntax
 - [02. Tokens](02_tokens.md) - Understanding C program building blocks
 - [03. Identifiers & Variables](03_identifiers_variables.md) - Naming conventions and variable declaration
 - [04. Data Types](04_data_types.md) - Integer, float, char, and other data types
@@ -49,12 +49,14 @@ This repository contains organized learning materials covering all fundamental C
 - Basic understanding of programming concepts (helpful but not required)
 
 ### Running Your First Program
-1. **Compile the code:**
+1. **Save the code from [01. Basic Structure](01_basic_structure.md) to a file named `basic_structure.c`**
+
+2. **Compile the code:**
    ```bash
-   gcc 01_basic_structure.c -o basic_structure
+   gcc basic_structure.c -o basic_structure
    ```
 
-2. **Run the executable:**
+3. **Run the executable:**
    ```bash
    ./basic_structure
    ```
@@ -153,7 +155,7 @@ We have a **well-organized contributions system** with dedicated folders for dif
 
 We recommend following this order for beginners:
 1. Start with [00. Installation](00_installation.md) and [00. Introduction](00_intro_to_c_programming.md)
-2. Learn [01. Basic Structure](01_basic_structure.c) and [02. Tokens](02_tokens.md)
+2. Learn [01. Basic Structure](01_basic_structure.md) and [02. Tokens](02_tokens.md)
 3. Understand [03. Data Types](03_identifiers_variables.md) and [04. Variables](04_data_types.md)
 4. Practice [05. Operators](05_operators.md) and [07. Control Flow](07_control_flow.md)
 5. Work with [08. Functions](08_functions.md) and [09. Arrays](09_intro_to_arrays.md)

@@ -27,8 +27,8 @@
 ## 📚 **Complete Learning Path Navigation**
 
 ### **Getting Started Section**
-1. [00. Installation](00_installation.md) → [00. Introduction](00_intro_to_c_programming.md) → [01. Basic Structure](01_basic_structure.c)
-2. [01. Basic Structure](01_basic_structure.c) → [02. Tokens](02_tokens.md) → [03. Identifiers & Variables](03_identifiers_variables.md)
+1. [00. Installation](00_installation.md) → [00. Introduction](00_intro_to_c_programming.md) → [01. Basic Structure](01_basic_structure.md)
+2. [01. Basic Structure](01_basic_structure.md) → [02. Tokens](02_tokens.md) → [03. Identifiers & Variables](03_identifiers_variables.md)
 3. [02. Tokens](02_tokens.md) → [03. Identifiers & Variables](03_identifiers_variables.md) → [04. Data Types](04_data_types.md)
 4. [03. Identifiers & Variables](03_identifiers_variables.md) → [04. Data Types](04_data_types.md) → [05. Operators](05_operators.md)
 
