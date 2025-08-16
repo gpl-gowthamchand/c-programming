@@ -101,6 +101,8 @@ We have a **well-organized contributions system** with dedicated folders for dif
 
 ### How to Contribute
 
+**⚠️ Important Note**: The master/main branch is protected to maintain code quality. Please follow this workflow:
+
 1. **Fork the repository**
 2. **Create a feature branch:**
    ```bash
@@ -119,7 +121,11 @@ We have a **well-organized contributions system** with dedicated folders for dif
    ```bash
    git push origin feature/your-feature-name
    ```
-6. **Create a Pull Request**
+6. **Create a Pull Request (PR)** with a clear description of your changes
+7. **Wait for review** - I'll review your PR and provide feedback
+8. **After approval** - I'll merge your changes into the main branch
+
+**This ensures quality control and prevents conflicts while maintaining a collaborative environment!** 🚀
 
 ### What We're Looking For
 
