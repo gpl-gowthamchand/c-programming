@@ -87,13 +87,6 @@ After installing VS Code, consider installing these extensions for C programming
 3. **Code Runner** by Jun Han
 4. **GitLens** by GitKraken
 
-## System Requirements
-
-- Fedora Workstation 42 (or later)
-- At least 1GB of available disk space
-- 512MB RAM minimum (1GB recommended)
-- Internet connection for initial setup and extensions
-
 ## Troubleshooting
 
 If you encounter any issues:
