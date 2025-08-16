@@ -98,24 +98,228 @@ int main() {
 ```
 
 ## Pointers and Arrays
-Arrays and pointers are closely related in C:
+Arrays and pointers are closely related in C. In fact, an array name is essentially a pointer to the first element of the array.
 
+### Array Name as a Pointer
 ```c
 #include <stdio.h>
 
 int main() {
     int arr[] = {1, 2, 3, 4, 5};
+    
+    // arr is equivalent to &arr[0]
+    printf("arr: %p\n", (void*)arr);
+    printf("&arr[0]: %p\n", (void*)&arr[0]);
+    
+    // Both are the same
+    if (arr == &arr[0]) {
+        printf("arr and &arr[0] are equal!\n");
+    }
+    
+    return 0;
+}
+```
+
+### Different Ways to Access Array Elements
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
     int *ptr = arr;
     
-    // Using array notation
+    printf("=== Array Notation ===\n");
     for (int i = 0; i < 5; i++) {
-        printf("%d ", arr[i]);
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+    
+    printf("\n=== Pointer Notation ===\n");
+    for (int i = 0; i < 5; i++) {
+        printf("*(ptr + %d) = %d\n", i, *(ptr + i));
+    }
+    
+    printf("\n=== Alternative Pointer Notation ===\n");
+    for (int i = 0; i < 5; i++) {
+        printf("ptr[%d] = %d\n", i, ptr[i]);
+    }
+    
+    return 0;
+}
+```
+
+### Pointer Arithmetic with Arrays
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {100, 200, 300, 400, 500};
+    int *ptr = arr;
+    
+    printf("Initial ptr points to: %d\n", *ptr);
+    
+    ptr++;  // Move to next element
+    printf("After ptr++: %d\n", *ptr);
+    
+    ptr += 2;  // Move 2 elements forward
+    printf("After ptr += 2: %d\n", *ptr);
+    
+    ptr--;  // Move back 1 element
+    printf("After ptr--: %d\n", *ptr);
+    
+    ptr -= 2;  // Move back 2 elements
+    printf("After ptr -= 2: %d\n", *ptr);
+    
+    return 0;
+}
+```
+
+### Multi-dimensional Arrays and Pointers
+```c
+#include <stdio.h>
+
+int main() {
+    int matrix[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+    
+    // Pointer to first element
+    int *ptr = &matrix[0][0];
+    
+    printf("=== Using Single Pointer ===\n");
+    for (int i = 0; i < 12; i++) {
+        printf("%2d ", *(ptr + i));
+        if ((i + 1) % 4 == 0) printf("\n");
+    }
+    
+    // Pointer to first row
+    int (*row_ptr)[4] = matrix;
+    
+    printf("\n=== Using Row Pointer ===\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            printf("%2d ", row_ptr[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+### Array of Pointers
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20, c = 30, d = 40;
+    
+    // Array of pointers to integers
+    int *ptr_array[] = {&a, &b, &c, &d};
+    
+    printf("=== Array of Pointers ===\n");
+    for (int i = 0; i < 4; i++) {
+        printf("ptr_array[%d] points to: %d\n", i, *ptr_array[i]);
+    }
+    
+    // Modifying values through array of pointers
+    *ptr_array[0] = 100;
+    *ptr_array[1] = 200;
+    
+    printf("\nAfter modification:\n");
+    printf("a = %d, b = %d\n", a, b);
+    
+    return 0;
+}
+```
+
+### Pointer to Array
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    // Pointer to an array of 5 integers
+    int (*array_ptr)[5] = &arr;
+    
+    printf("=== Pointer to Array ===\n");
+    printf("Size of array_ptr: %zu bytes\n", sizeof(*array_ptr));
+    printf("Size of arr: %zu bytes\n", sizeof(arr));
+    
+    // Accessing elements
+    for (int i = 0; i < 5; i++) {
+        printf("(*array_ptr)[%d] = %d\n", i, (*array_ptr)[i]);
+    }
+    
+    return 0;
+}
+```
+
+### Dynamic Arrays with Pointers
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int size;
+    printf("Enter array size: ");
+    scanf("%d", &size);
+    
+    // Dynamically allocate array
+    int *dynamic_arr = (int*)malloc(size * sizeof(int));
+    
+    if (dynamic_arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+    
+    // Initialize array
+    for (int i = 0; i < size; i++) {
+        dynamic_arr[i] = (i + 1) * 10;
+    }
+    
+    // Display array
+    printf("Dynamic array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", dynamic_arr[i]);
     }
     printf("\n");
     
-    // Using pointer notation
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", *(ptr + i));
+    // Free allocated memory
+    free(dynamic_arr);
+    dynamic_arr = NULL;
+    
+    return 0;
+}
+```
+
+### Common Array-Pointer Operations
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {5, 15, 25, 35, 45};
+    int *ptr = arr;
+    
+    printf("=== Common Operations ===\n");
+    
+    // Get array length (only works for arrays, not pointers)
+    int arr_length = sizeof(arr) / sizeof(arr[0]);
+    printf("Array length: %d\n", arr_length);
+    
+    // Pointer arithmetic
+    printf("First element: %d\n", *ptr);
+    printf("Last element: %d\n", *(ptr + arr_length - 1));
+    printf("Middle element: %d\n", *(ptr + arr_length / 2));
+    
+    // Compare pointers
+    int *end_ptr = ptr + arr_length;
+    printf("Elements between ptr and end_ptr:\n");
+    while (ptr < end_ptr) {
+        printf("%d ", *ptr);
+        ptr++;
     }
     printf("\n");
     
