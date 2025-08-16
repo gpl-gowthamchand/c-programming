@@ -64,13 +64,13 @@ Used to combine or invert conditions.
 | Operator | Description      | Example         |
 |----------|------------------|----------------|
 | `&&`     | Logical AND      | `(a > 5) && (b < 5)`       |
-| `||`     | Logical OR       | `(a > 5) || (b < 5)`       |
+| `\|\|`     | Logical OR       | `(a > 5) \|\| (b < 5)`       |
 | `!`      | Logical NOT      | `!a`           |
 
 **Example:**
 ```c
 printf("Logical AND: %d\n", (a > 5) && (b < 5)); // 1 (true)
-printf("Logical OR: %d\n", (a > 5) || (b > 5));  // 1 (true)
+printf("Logical OR: %d\n", (a > 5) \|\| (b > 5));  // 1 (true)
 printf("Logical NOT: %d\n", !(a > 5));           // 0 (false)
 ```
 
@@ -119,7 +119,7 @@ Operate on bits of integer data.
 | Operator | Description      | Example         |
 |----------|------------------|----------------|
 | `&`      | Bitwise AND      | `a & b`        |
-| `|`      | Bitwise OR       | `a | b`        |
+| `\|`      | Bitwise OR       | `a \| b`        |
 | `^`      | Bitwise XOR      | `a ^ b`        |
 | `~`      | Bitwise NOT      | `~a`           |
 | `<<`     | Left shift       | `a << 2`       |
@@ -129,7 +129,7 @@ Operate on bits of integer data.
 ```c
 int a = 10, b = 3;
 printf("Bitwise AND: %d\n", a & b);   // 2
-printf("Bitwise OR: %d\n", a | b);    // 11
+printf("Bitwise OR: %d\n", a \| b);    // 11
 printf("Bitwise XOR: %d\n", a ^ b);   // 9
 printf("Bitwise NOT: %d\n", ~a);      // -11
 printf("Left Shift: %d\n", a << 1);   // 20
@@ -179,7 +179,7 @@ printf("Pointer value: %d\n", *ptr);       // prints value at address
 - **Unary operators** operate on a single operand.
   - Examples: `++a`, `--b`, `!flag`, `~x`, `sizeof(a)`, `&x`, `*ptr`
 - **Binary operators** operate on two operands.
-  - Examples: `a + b`, `x - y`, `a && b`, `a || b`, `a | b`, `a = b`
+  - Examples: `a + b`, `x - y`, `a && b`, `a \|\| b`, `a \| b`, `a = b`
 
 ---
 
