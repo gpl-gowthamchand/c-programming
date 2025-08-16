@@ -57,16 +57,7 @@ This repository contains organized learning materials covering all fundamental C
    ./basic_structure
    ```
 
-### Example Program
-```c
-#include <stdio.h>
 
-int main() {
-    printf("Hello, World!\n");
-    printf("Welcome to C Programming!\n");
-    return 0;
-}
-```
 
 ## 🤝 Contributing
 
