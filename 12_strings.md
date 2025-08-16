@@ -1,5 +1,12 @@
 # Strings in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [11 Array Examples](11_array_examples.md) | [README](README.md) | [13 Structures](13_structures.md) |
+
+---
+
 ## What is a String?
 
 A string in C is a sequence of characters terminated by a null character (`\0`). It's essentially an array of characters where the last element is the null terminator.

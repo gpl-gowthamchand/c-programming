@@ -1,5 +1,12 @@
 # Functions in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [07 Control Flow](07_control_flow.md) | [README](README.md) | [09 Intro To Arrays](09_intro_to_arrays.md) |
+
+---
+
 Functions are blocks of code designed to perform a specific task.  
 They help organize code, promote reusability, and make programs easier to read and maintain.
 

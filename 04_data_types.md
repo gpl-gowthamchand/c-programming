@@ -1,5 +1,12 @@
 # Data Types in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [03 Identifiers Variables](03_identifiers_variables.md) | [README](README.md) | [05 Operators](05_operators.md) |
+
+---
+
 Data types in C specify the type of data that a variable can hold.  
 They help the compiler allocate memory and interpret the data correctly.
 

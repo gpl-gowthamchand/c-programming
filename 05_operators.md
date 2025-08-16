@@ -1,5 +1,12 @@
 # Operators in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [04 Data Types](04_data_types.md) | [README](README.md) | [06 Input Output](06_input_output.md) |
+
+---
+
 Operators are special symbols that perform operations on variables and values.  
 They are essential for manipulating data and controlling program flow.
 

@@ -1,5 +1,12 @@
 # Examples of Arrays in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [10 Types Of Arrays](10_types_of_arrays.md) | [README](README.md) | [12 Strings](12_strings.md) |
+
+---
+
 This document contains various practical examples demonstrating array operations in C programming.
 
 ## Basic Array Operations

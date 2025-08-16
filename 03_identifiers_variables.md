@@ -1,5 +1,12 @@
 # Identifiers and Variables in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [Tokens](02_tokens.md) | [README](README.md) | [Data Types](04_data_types.md) |
+
+---
+
 ## Identifiers
 
 **Identifiers** are names given to various program elements such as variables, functions, arrays, etc.  
@@ -139,3 +146,12 @@ int main() {
 ---
 
 Identifiers, variables, and constants are fundamental for organizing and managing data in your
+
+---
+
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [Tokens](02_tokens.md) | [README](README.md) | [Data Types](04_data_types.md) |
+
+[⬆️ Back to Top](#identifiers-and-variables-in-c-programming)

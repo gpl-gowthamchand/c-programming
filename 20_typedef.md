@@ -1,5 +1,12 @@
 # Typedef in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [19 Storage Classes](19_storage_classes.md) | [README](README.md) | [21 Pattern Examples](21_pattern_examples.md) |
+
+---
+
 ## Overview
 `typedef` is a keyword in C that allows you to create alternative names (aliases) for existing data types. It's a powerful feature that enhances code readability and maintainability by creating meaningful type names.
 

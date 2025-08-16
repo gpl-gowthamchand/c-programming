@@ -1,5 +1,12 @@
 # Introduction to C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [Installation Guide](00_installation.md) | [README](README.md) | [Basic Structure](01_basic_structure.c) |
+
+---
+
 ## 🤔 What is C Programming?
 
 C is a **general-purpose, procedural programming language** developed by Dennis Ritchie at Bell Labs in 1972. It's often called the "mother of all programming languages" because many modern languages like C++, Java, Python, and JavaScript have been influenced by or built upon C.

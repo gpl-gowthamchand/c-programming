@@ -1,5 +1,12 @@
 # Control Flow Statements in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [06 Input Output](06_input_output.md) | [README](README.md) | [08 Functions](08_functions.md) |
+
+---
+
 Control flow statements determine the order in which instructions are executed in a C program.  
 They allow you to make decisions, repeat actions, and jump to different parts of your code, making your programs flexible and logical.
 

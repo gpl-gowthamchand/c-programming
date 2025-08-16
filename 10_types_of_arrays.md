@@ -1,5 +1,12 @@
 # Types of Arrays in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [09 Intro To Arrays](09_intro_to_arrays.md) | [README](README.md) | [11 Array Examples](11_array_examples.md) |
+
+---
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [One-Dimensional Arrays](#one-dimensional-arrays)

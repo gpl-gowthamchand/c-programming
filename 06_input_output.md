@@ -1,5 +1,12 @@
 # Input and Output in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [05 Operators](05_operators.md) | [README](README.md) | [07 Control Flow](07_control_flow.md) |
+
+---
+
 Input and output (I/O) operations allow a C program to interact with the user or other systems.  
 The standard library provides functions for reading input and displaying output.
 

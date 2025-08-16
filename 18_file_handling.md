@@ -1,5 +1,12 @@
 # File Handling in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [17 Dynamic Memory Allocation](17_dynamic_memory_allocation.md) | [README](README.md) | [19 Storage Classes](19_storage_classes.md) |
+
+---
+
 ## Overview
 File handling in C allows you to create, read, write, and manipulate files on your computer's storage. C provides a set of functions in the `<stdio.h>` header file for file operations.
 

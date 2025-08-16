@@ -1,5 +1,12 @@
 # Introduction to Arrays in C
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [08 Functions](08_functions.md) | [README](README.md) | [10 Types Of Arrays](10_types_of_arrays.md) |
+
+---
+
 Arrays are a fundamental data structure in C that allow you to store multiple values of the same type in a single variable.  
 They are useful for managing lists, collections, and sequences of data.
 

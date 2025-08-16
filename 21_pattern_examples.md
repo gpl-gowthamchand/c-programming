@@ -1,5 +1,12 @@
 # Pattern Programs in C
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [20 Typedef](20_typedef.md) | [README](README.md) | - |
+
+---
+
 Pattern programs are commonly used to practice loops and understand control flow in C.  
 They help visualize how nested loops work and how output can be formatted.
 

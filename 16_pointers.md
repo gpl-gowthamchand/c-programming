@@ -1,5 +1,12 @@
 # Pointers in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [15 Enums](15_enums.md) | [README](README.md) | [17 Dynamic Memory Allocation](17_dynamic_memory_allocation.md) |
+
+---
+
 ## Introduction
 Pointers are one of the most powerful and fundamental concepts in C programming. They allow you to directly manipulate memory addresses and create efficient, flexible programs.
 

@@ -1,5 +1,12 @@
 # Structures in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [12 Strings](12_strings.md) | [README](README.md) | [14 Unions](14_unions.md) |
+
+---
+
 ## Introduction
 Structures in C are user-defined data types that allow you to group different types of data under a single name. They are essential for creating complex data structures and organizing related data.
 

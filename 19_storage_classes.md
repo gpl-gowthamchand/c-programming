@@ -1,5 +1,12 @@
 # Storage Classes in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [18 File Handling](18_file_handling.md) | [README](README.md) | [20 Typedef](20_typedef.md) |
+
+---
+
 Storage classes in C determine the scope, lifetime, and memory location of variables. They control how variables are stored in memory and how long they persist during program execution.
 
 ## Types of Storage Classes

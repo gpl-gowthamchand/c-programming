@@ -1,5 +1,12 @@
 # Dynamic Memory Allocation in C Programming
 
+## 🧭 **Navigation**
+| ⬅️ Previous | 🏠 Home | ➡️ Next |
+|:------------|:--------|:--------|
+| [16 Pointers](16_pointers.md) | [README](README.md) | [18 File Handling](18_file_handling.md) |
+
+---
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Memory Management Functions](#memory-management-functions)
