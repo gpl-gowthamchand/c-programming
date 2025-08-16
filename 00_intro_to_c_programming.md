@@ -3,7 +3,7 @@
 <div align="right">
 
 **🧭 Navigation**  
-[⬅️ Previous](00_installation.md) | [🏠 Home](README.md) | [➡️ Next](01_basic_structure.c)
+[⬅️ Previous](00_installation.md) | [🏠 Home](README.md) | [➡️ Next](01_basic_structure.md)
 
 </div>
 
@@ -262,6 +262,6 @@ Remember: **Every expert was once a beginner**. Take your time, ask questions, a
 <div align="right">
 
 **🧭 Navigation**  
-[⬅️ Previous](00_installation.md) | [🏠 Home](README.md) | [➡️ Next](01_basic_structure.c)
+[⬅️ Previous](00_installation.md) | [🏠 Home](README.md) | [➡️ Next](01_basic_structure.md)
 
 </div>

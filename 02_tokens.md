@@ -3,7 +3,7 @@
 <div align="right">
 
 **🧭 Navigation**  
-[⬅️ Previous](01_basic_structure.c) | [🏠 Home](README.md) | [➡️ Next](03_identifiers_variables.md)
+[⬅️ Previous](01_basic_structure.md) | [🏠 Home](README.md) | [➡️ Next](03_identifiers_variables.md)
 
 </div>
 
@@ -54,7 +54,7 @@ Tokens are fundamental to understanding how C programs are structured and interp
 ## 🧭 **Navigation**
 | ⬅️ Previous | 🏠 Home | ➡️ Next |
 |:------------|:--------|:--------|
-| [Basic Structure](01_basic_structure.c) | [README](README.md) | [Identifiers & Variables](03_identifiers_variables.md) |
+| [Basic Structure](01_basic_structure.md) | [README](README.md) | [Identifiers & Variables](03_identifiers_variables.md) |
 
 [⬆️ Back to Top](#tokens-in-c-programming)
 
@@ -63,6 +63,6 @@ Tokens are fundamental to understanding how C programs are structured and interp
 <div align="right">
 
 **🧭 Navigation**  
-[⬅️ Previous](01_basic_structure.c) | [🏠 Home](README.md) | [➡️ Next](03_identifiers_variables.md)
+[⬅️ Previous](01_basic_structure.md) | [🏠 Home](README.md) | [➡️ Next](03_identifiers_variables.md)
 
 </div>
