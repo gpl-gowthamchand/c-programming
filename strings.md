@@ -81,6 +81,27 @@ scanf("%s", name);  // Reads until whitespace
 printf("Hello, %s!\n", name);
 ```
 
+**Important Note**: When using `scanf()` with strings, we do **NOT** use the `&` symbol before the variable name. This is different from other data types.
+
+**Why no `&` symbol for strings?**
+- **Strings are arrays**: `name` is already a pointer to the first element
+- **Arrays decay to pointers**: When we pass `name` to `scanf()`, it automatically becomes a pointer
+- **Other data types need `&`**: `int`, `float`, `char` need `&` because we need to pass their memory address
+
+**Comparison Examples:**
+```c
+int number;
+char character;
+char string[50];
+
+// For other data types - NEED & symbol
+scanf("%d", &number);      // &number gives address of int
+scanf("%c", &character);   // &character gives address of char
+
+// For strings - NO & symbol needed
+scanf("%s", string);       // string is already a pointer (array name)
+```
+
 **Note**: `scanf()` with `%s` is unsafe for buffer overflow. Use `fgets()` for safer input.
 
 ## Character vs String
@@ -387,6 +408,21 @@ fgets(str, sizeof(str), stdin);
 char str[100] = {0};  // Initialize all elements to 0 (null)
 ```
 
+### 5. Remember: No & Symbol for Strings in scanf()
+```c
+// CORRECT - No & symbol for strings
+char name[50];
+scanf("%s", name);
+
+// WRONG - Don't use & with strings
+char name[50];
+scanf("%s", &name);  // This will cause compilation error or undefined behavior
+
+// CORRECT - Use & for other data types
+int age;
+scanf("%d", &age);
+```
+
 ## Summary
 
 - **Strings** are arrays of characters terminated by `\0`
@@ -398,5 +434,6 @@ char str[100] = {0};  // Initialize all elements to 0 (null)
 - **Always** ensure proper null termination
 - **Use safe functions** like `fgets()` instead of `gets()`
 - **Check buffer sizes** to prevent overflow
+- **No `&` symbol** needed when using `scanf()` with strings (unlike other data types)
 
 Understanding strings is fundamental to C programming, as they're used extensively in text processing, user input, and data manipulation.
