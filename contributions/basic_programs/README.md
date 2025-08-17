@@ -24,3 +24,18 @@ Use the format: `basic_programName.c`
 ```
 
 **Happy coding! 🌟**
+
+1   /* basic program to add two numbers */
+  #include <stdio.h>   //preprocessor directive for standard input / output functions
+  int main(){
+    
+    /*initialize values to variables */
+    
+  int num1=10;
+  int num2=20;
+  int sum=num1+num2;  // perform operation 
+  printf("%d",sum);   // print output
+  return 0
+  }
+
+  //
