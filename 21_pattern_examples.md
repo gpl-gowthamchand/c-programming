@@ -3,7 +3,7 @@
 <div align="right">
 
 **🧭 Navigation**  
-[⬅️ Previous](20_typedef.md) | [🏠 Home](README.md) | [➡️ Next](21_pattern_examples.md)
+[⬅️ Previous](20_typedef.md) | [🏠 Home](README.md) | [➡️ Next](README.md)
 
 </div>
 
@@ -256,6 +256,152 @@ int main() {
 
 ---
 
+**Code:**  
+Runnable source: [contributions/basic_programs/pattern_hollow_square.c](../contributions/basic_programs/pattern_hollow_square.c)
+
+```c
+/*
+ * Hollow Square Pattern
+ *
+ * Explanation:
+ *  - The pattern prints a square of size n.
+ *  - Only the border (first row, last row, first column, last column)
+ *    is printed with '*'.
+ *  - The inner cells are printed with spaces to make the square hollow.
+
+ */
+
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (i == 1 || i == n || j == 1 || j == n)
+                printf("* ");
+            else
+                printf("  ");
+
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+**Expected output:**
+```
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+```
+---
+
+ **Code:**  
+Runnable source: [contributions/basic_programs/pattern_diamond.c](../contributions/basic_programs/pattern_diamond.c)
+
+```c
+/*
+ * Diamond Star Pattern
+ *
+ * Explanation:
+ *  - The diamond is created using:
+ *      1. Upper pyramid
+ *      2. Lower inverted pyramid
+ *  - Each row is centered using spaces.
+ */
+
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+
+    // Upper half
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++) printf(" ");
+        for (int j = 1; j <= 2*i - 1; j++) printf("*");
+        printf("\n");
+    }
+
+    // Lower half
+    for (int i = n - 1; i >= 1; i--) {
+        for (int s = 1; s <= n - i; s++) printf(" ");
+        for (int j = 1; j <= 2*i - 1; j++) printf("*");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+**Expected output:**
+```
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+```
+
+---
+
+ **Code:**  
+Runnable source: [contributions/basic_programs/pattern_hollow_pyramid.c](../contributions/basic_programs/pattern_hollow_pyramid.c)
+
+```c
+/*
+ * Hollow Pyramid Pattern
+ *
+ * Explanation:
+ *  - Spaces center the pyramid.
+ *  - First and last positions print stars.
+ *  - Last row prints all stars.
+ */
+
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+
+    for (int i = 1; i <= n; i++) {
+
+        // Leading spaces
+        for (int s = 1; s <= n - i; s++) printf(" ");
+
+        for (int j = 1; j <= 2*i - 1; j++) {
+            if (j == 1 || j == 2*i - 1 || i == n)
+                printf("*");
+            else
+                printf(" ");
+
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+**Expected output:**
+```
+    *
+   * *
+  *   *
+ *     *
+*********
+```
+---
+
+
+
 ## Summary
 
 - Pattern programs use nested loops for rows and columns.
@@ -267,6 +413,7 @@ int main() {
 <div align="right">
 
 **🧭 Navigation**  
-[⬅️ Previous](20_typedef.md) | [🏠 Home](README.md) | [➡️ Next](21_pattern_examples.md)
+[⬅️ Previous](20_typedef.md) | [🏠 Home](README.md)
+
 
 </div>

@@ -202,6 +202,139 @@ int multiply(int x, int y) {
 ```
 
 ---
+/*
+ * gcd_lcm_functions.c
+ * Demonstrates writing and reusing functions in C.
+ *
+ * What it shows:
+ *  - Pure functions with clear inputs/outputs
+ *  - Reuse: LCM computed using GCD
+ *
+ * Build:  gcc gcd_lcm_functions.c -o gcd_lcm
+ * Run:    ./gcd_lcm
+ */
+
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    while (b != 0) {
+        int r = a % b;
+        a = b;
+        b = r;
+    }
+    return (a < 0) ? -a : a; // handle negatives
+}
+
+long long lcm(int a, int b) {
+    int g = gcd(a, b);
+    // avoid overflow for small inputs by casting
+    return (long long)a / g * b;
+}
+
+int main(void) {
+    int x, y;
+    printf("Enter two integers: ");
+    if (scanf("%d %d", &x, &y) != 2) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    printf("GCD(%d, %d) = %d\n", x, y, gcd(x, y));
+    printf("LCM(%d, %d) = %lld\n", x, y, lcm(x, y));
+    return 0;
+}
+
+/*
+ * perfect_number_function.c
+ * Checks whether a number is a perfect number using a helper function.
+ *
+ * What it shows:
+ *  - Decomposing logic into a function (sum of proper divisors)
+ *  - Simple loop + conditionals inside a function
+ *
+ * Build:  gcc perfect_number_function.c -o perfect
+ * Run:    ./perfect
+ */
+
+#include <stdio.h>
+
+int sumOfProperDivisors(int n) {
+    if (n <= 1) return 0;
+    int sum = 1; // 1 is a proper divisor for n > 1
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            sum += i;
+            if (i != n / i) sum += n / i; // add the paired divisor
+        }
+    }
+    return sum;
+}
+
+int main(void) {
+    int n;
+    printf("Enter a positive integer: ");
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    if (sumOfProperDivisors(n) == n)
+        printf("%d is a Perfect Number\n", n);
+    else
+        printf("%d is NOT a Perfect Number\n", n);
+
+    return 0;
+}
+
+/*
+ * strong_number_function.c
+ * Strong number: sum of factorials of digits equals the number (e.g., 145).
+ *
+ * What it shows:
+ *  - Multiple small functions (digit factorial, checker)
+ *  - Reusability of a precomputed factorial(0..9) table
+ *
+ * Build:  gcc strong_number_function.c -o strong
+ * Run:    ./strong
+ */
+
+#include <stdio.h>
+
+int fact[10];
+
+void precomputeFactorials(void) {
+    fact[0] = 1;
+    for (int d = 1; d <= 9; d++) fact[d] = fact[d - 1] * d;
+}
+
+int isStrong(int n) {
+    int original = n, sum = 0;
+    while (n > 0) {
+        int digit = n % 10;
+        sum += fact[digit];
+        n /= 10;
+    }
+    return sum == original;
+}
+
+int main(void) {
+    precomputeFactorials();
+
+    int n;
+    printf("Enter a positive integer: ");
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    if (isStrong(n))
+        printf("%d is a Strong Number\n", n);
+    else
+        printf("%d is NOT a Strong Number\n", n);
+
+    return 0;
+}
+
 
 ## Summary
 
