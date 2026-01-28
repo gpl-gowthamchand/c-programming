@@ -44,8 +44,34 @@ This repository contains organized learning materials covering all fundamental C
 
 ## Quick Start
 
-### Prerequisites
+## Prerequisites
 - GCC compiler (GNU Compiler Collection)
+
+## Installing GCC (GNU Compiler Collection)
+
+GCC is required to compile and run C programs. Follow the steps below
+based on your operating system.
+
+### Windows
+1. Download and install **MinGW-w64** or **TDM-GCC**.
+2. During installation, make sure to select the option to add GCC to the system PATH.
+3. After installation, open Command Prompt and verify:
+```bash
+gcc --version
+```
+
+### Linux (Ubuntu / Debian)
+Open a terminal and run:
+```bash
+sudo apt update
+sudo apt install build-essential
+gcc --version
+```
+### macOS
+```bash
+xcode-select --install
+gcc --version
+```
 - Basic understanding of programming concepts (helpful but not required)
 
 ### Running Your First Program
